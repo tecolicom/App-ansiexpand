@@ -1,7 +1,7 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "ANSI sequence aware tab expand/unexpand command",
    "author" : [
-      "Kazumasa Utashiro <kaz@utashiro.com>"
+      "Kazumasa Utashiro"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.1.12, CPAN::Meta::Converter version 2.150010",
@@ -42,7 +42,12 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008001"
+            "Encode" : "0",
+            "Getopt::EX::Hashed" : "1.02",
+            "Getopt::EX::Long" : "0",
+            "Pod::Usage" : "0",
+            "Text::ANSI::Tabs" : "0",
+            "perl" : "5.014"
          }
       },
       "test" : {
@@ -54,6 +59,9 @@
    "release_status" : "unstable",
    "version" : "0.01",
    "x_authority" : "cpan:UTASHIRO",
+   "x_contributors" : [
+      "Kazumasa Utashiro <kaz@utashiro.com>"
+   ],
    "x_serialization_backend" : "JSON::PP version 4.04",
    "x_static_install" : 1
 }
