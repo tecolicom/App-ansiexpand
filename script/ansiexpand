@@ -24,9 +24,15 @@ ansiexpand, ansiunexpand - ANSI sequences aware tab expand/unexpand command
 
 =head1 SYNOPSIS
 
-    ansiexpand [ option ] file ...
+ansiexpand [ option ] file ...
 
-    ansiunexpand [ option ] file ...
+ansiunexpand [ option ] file ...
+
+    -t# --tabstop=#              tab stop width
+        --tabhead=char           tab head character
+        --tabspace=char          tab space character
+        --tabstyle=style         tab style
+        --ambiguous=wide|narrow  width of Unicode ambiguous character
 
 =head1 VERSION
 
@@ -46,6 +52,10 @@ implementation detail.
 
 =over 7
 
+=item B<--unexpand>, B<-u>
+
+Behave as unexpand command.
+
 =item B<--tabstop>=#, B<-t>#
 
 Set tab stop width.  Unlike L<expand(1)>, takes only single value.
@@ -54,8 +64,8 @@ Set tab stop width.  Unlike L<expand(1)>, takes only single value.
 
 =item B<--tabspace>=I<char>
 
-Set tab head and following space character.  If it is longer than
-single character, it is considered as a Unicode name.
+Set tab head and following space character.  If longer than single
+character, it is considered as a Unicode name.
 
 =item B<--tabstyle>=I<style>, B<--ts>=I<style>
 

@@ -5,9 +5,15 @@ ansiexpand, ansiunexpand - ANSI sequences aware tab expand/unexpand command
 
 # SYNOPSIS
 
-    ansiexpand [ option ] file ...
+ansiexpand \[ option \] file ...
 
-    ansiunexpand [ option ] file ...
+ansiunexpand \[ option \] file ...
+
+    -t# --tabstop=#              tab stop width
+        --tabhead=char           tab head character
+        --tabspace=char          tab space character
+        --tabstyle=style         tab style
+        --ambiguous=wide|narrow  width of Unicode ambiguous character
 
 # VERSION
 
@@ -25,6 +31,10 @@ implementation detail.
 
 # OPTIONS
 
+- **--unexpand**, **-u**
+
+    Behave as unexpand command.
+
 - **--tabstop**=#, **-t**#
 
     Set tab stop width.  Unlike [expand(1)](http://man.he.net/man1/expand), takes only single value.
@@ -32,8 +42,8 @@ implementation detail.
 - **--tabhead**=_char_
 - **--tabspace**=_char_
 
-    Set tab head and following space character.  If it is longer than
-    single character, it is considered as a Unicode name.
+    Set tab head and following space character.  If longer than single
+    character, it is considered as a Unicode name.
 
 - **--tabstyle**=_style_, **--ts**=_style_
 
