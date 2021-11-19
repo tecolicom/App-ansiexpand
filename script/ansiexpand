@@ -117,3 +117,7 @@ This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 =cut
+
+#  LocalWords:  perl unexpand utf ansiexpand ansiunexpand tabstop
+#  LocalWords:  tabhead tabspace tabstyle Unicode ansiexpandrc cpanm
+#  LocalWords:  ansiunexpandrc CPANMINUS Kazumasa Utashiro
