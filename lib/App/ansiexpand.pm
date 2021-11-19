@@ -7,13 +7,14 @@ use warnings;
 use open IO => 'utf8', ':std';
 use Encode;
 use Pod::Usage;
+use Data::Dumper;
 use Text::ANSI::Tabs qw(ansi_expand ansi_unexpand);
 
 our $DEFAULT_UNEXPAND;
 
-use Getopt::EX::Hashed 1.02 'has'; {
+use Getopt::EX::Hashed 1.03 'has'; {
 
-    has unexpand  => '    !   ' , default => $DEFAULT_UNEXPAND;
+    has unexpand  => ' u  !   ' , default => $DEFAULT_UNEXPAND;
     has ambiguous => '    =s  ' , any => [ qw(wide narrow) ];
     has tabstop   => ' t  =i  ' , min => 1;
     has tabhead   => '    =s  ' ;

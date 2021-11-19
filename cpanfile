@@ -1,5 +1,5 @@
 requires 'Encode';
-requires 'Getopt::EX::Hashed', '1.02';
+requires 'Getopt::EX::Hashed', '1.03';
 requires 'Getopt::EX::Long';
 requires 'Pod::Usage';
 requires 'Text::ANSI::Tabs';
@@ -11,4 +11,5 @@ on configure => sub {
 
 on test => sub {
     requires 'Test::More', '0.98';
+    requires 'Text::ParseWords';
 };
