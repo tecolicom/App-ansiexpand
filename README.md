@@ -54,6 +54,15 @@ implementation detail.
 
     Set the width of Unicode ambiguous characters.  Default is `narrow`.
 
+# INCOMPATIBILITY
+
+There is no **-a** option for **ansiunexpand** and it always convert all
+spaces not only leading ones.  Use normal [unexpand(1)](http://man.he.net/man1/unexpand) to convert
+just leading spaces.
+
+**ansiexpand** expands all tabs even if it is converted to single
+space without reducing data length.
+
 # FILES
 
 - `~/.ansiexpandrc`, `~/.ansiunexpandrc`

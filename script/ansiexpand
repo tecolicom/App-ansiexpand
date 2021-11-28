@@ -78,6 +78,15 @@ Set the width of Unicode ambiguous characters.  Default is C<narrow>.
 
 =back
 
+=head1 INCOMPATIBILITY
+
+There is no B<-a> option for B<ansiunexpand> and it always convert all
+spaces not only leading ones.  Use normal L<unexpand(1)> to convert
+just leading spaces.
+
+B<ansiexpand> expands all tabs even if it is converted to single
+space without reducing data length.
+
 =head1 FILES
 
 =over 4

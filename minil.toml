@@ -7,3 +7,8 @@ authority="cpan:UTASHIRO"
 module_maker="ModuleBuildTiny"
 static_install = "auto"
 
+[unsupported]
+os = [
+    "MSWin32",
+]
+
