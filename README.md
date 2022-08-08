@@ -22,11 +22,11 @@ Version 0.9901
 # DESCRIPTION
 
 **ansiexpand** is an [expand(1)](http://man.he.net/man1/expand) compatible command utilizing
-[Text::ANSI::Tabs](https://metacpan.org/pod/Text::ANSI::Tabs) module, which enables to handle ANSI terminal
+[Text::ANSI::Tabs](https://metacpan.org/pod/Text%3A%3AANSI%3A%3ATabs) module, which enables to handle ANSI terminal
 sequences and Unicode wide characters.
 
-This is a command line interface for [Text::ANSI::Tabs](https://metacpan.org/pod/Text::ANSI::Tabs) module, which
-uses [Text::ANSI::Fold](https://metacpan.org/pod/Text::ANSI::Fold) module as a backend.  Consult them for
+This is a command line interface for [Text::ANSI::Tabs](https://metacpan.org/pod/Text%3A%3AANSI%3A%3ATabs) module, which
+uses [Text::ANSI::Fold](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold) module as a backend.  Consult them for
 implementation detail.
 
 # OPTIONS
@@ -48,7 +48,7 @@ implementation detail.
 - **--tabstyle**=_style_, **--ts**=_style_
 
     Set tab style.  Try `--tabstyle=shade` for example.  See
-    [Text::ANSI::Fold](https://metacpan.org/pod/Text::ANSI::Fold) for detail.
+    [Text::ANSI::Fold](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold) for detail.
 
 - **--ambiguous**=`wide`|`narrow`
 
@@ -68,7 +68,7 @@ space without reducing data length.
 - `~/.ansiexpandrc`, `~/.ansiunexpandrc`
 
     Start-up file.
-    See [Getopt::EX::Module](https://metacpan.org/pod/Getopt::EX::Module) for format.
+    See [Getopt::EX::Module](https://metacpan.org/pod/Getopt%3A%3AEX%3A%3AModule) for format.
 
 # INSTALL
 
@@ -80,7 +80,7 @@ space without reducing data length.
 
 # SEE ALSO
 
-[App::ansiexpand](https://metacpan.org/pod/App::ansiexpand), [https://github.com/kaz-utashiro/App-ansiexpand](https://github.com/kaz-utashiro/App-ansiexpand)
+[App::ansiexpand](https://metacpan.org/pod/App%3A%3Aansiexpand), [https://github.com/kaz-utashiro/App-ansiexpand](https://github.com/kaz-utashiro/App-ansiexpand)
 
 [Text::ANSI::Tabs](https://github.com/kaz-utashiro/Text-ANSI-Tabs)
 
