@@ -17,7 +17,7 @@ ansiunexpand \[ option \] file ...
 
 # VERSION
 
-Version 0.9901
+Version 1.01
 
 # DESCRIPTION
 
