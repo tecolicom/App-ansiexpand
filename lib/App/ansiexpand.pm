@@ -1,5 +1,5 @@
 package App::ansiexpand;
-our $VERSION = "1.01";
+our $VERSION = "1.02";
 
 use 5.014;
 use warnings;
@@ -90,7 +90,7 @@ ansiexpand, ansiunexpand - ANSI sequence aware tab expand/unexpand command
 
 =head1 VERSION
 
-Version 1.01
+Version 1.02
 
 =head1 DESCRIPTION
 
