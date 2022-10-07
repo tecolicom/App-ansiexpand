@@ -47,7 +47,8 @@ use Getopt::EX::Hashed 1.05; {
     has ARGV => default => [];
     has '<>' => sub {
 	if ($_[0] =~ /^-([0-9]+)$/x) {
-	    $_->{tabstop} = $Text::ANSI::Tabs::tabstop = $1;
+	    $_->{tabstop} = $Text::ANSI::Tabs::tabstop = $1 or
+		die "$_[0]: invalid tabstop\n";
 	} else {
 	    if ($_[0] =~ /^--?(.+)/) {
 		warn "Unknown option: $1\n";
