@@ -50,7 +50,7 @@ use Getopt::EX::Hashed 1.05; {
 	    $_->{tabstop} = $Text::ANSI::Tabs::tabstop = $1 or
 		die "$_[0]: invalid tabstop\n";
 	} else {
-	    if ($_[0] =~ /^--?(.+)/) {
+	    if ($_[0] =~ /^-{1,2}+(.+)/) {
 		warn "Unknown option: $1\n";
 		pod2usage();
 	    }
