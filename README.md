@@ -24,7 +24,8 @@ Version 1.02
 
 **ansiexpand** is an [expand(1)](http://man.he.net/man1/expand) compatible command utilizing
 [Text::ANSI::Tabs](https://metacpan.org/pod/Text%3A%3AANSI%3A%3ATabs) module, which enables to handle ANSI terminal
-sequences and Unicode wide characters.
+sequences and Unicode wide characters.  Not only expanding tabs to
+spaces, it can visualize them in various styles.
 
 This is a command line interface for [Text::ANSI::Tabs](https://metacpan.org/pod/Text%3A%3AANSI%3A%3ATabs) module, which
 uses [Text::ANSI::Fold](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold) module as a backend.  Consult them for
@@ -48,8 +49,9 @@ implementation detail.
 
 - **--tabstyle**=_style_, **--ts**=_style_
 
-    Set tab style.  Try `--tabstyle=shade` for example.  See
-    [Text::ANSI::Fold](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold) for detail.
+    Set tab style.  Try `--tabstyle=shade` for example.  My recent
+    favorite is `--tabstyle=squat-arrow,emspace`. See [Text::ANSI::Fold](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold)
+    for detail.
 
 - **--ambiguous**=`wide`|`narrow`
 

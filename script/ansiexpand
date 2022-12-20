@@ -43,7 +43,8 @@ Version 1.02
 
 B<ansiexpand> is an L<expand(1)> compatible command utilizing
 L<Text::ANSI::Tabs> module, which enables to handle ANSI terminal
-sequences and Unicode wide characters.
+sequences and Unicode wide characters.  Not only expanding tabs to
+spaces, it can visualize them in various styles.
 
 This is a command line interface for L<Text::ANSI::Tabs> module, which
 uses L<Text::ANSI::Fold> module as a backend.  Consult them for
@@ -70,8 +71,9 @@ character, it is considered as a Unicode name.
 
 =item B<--tabstyle>=I<style>, B<--ts>=I<style>
 
-Set tab style.  Try C<--tabstyle=shade> for example.  See
-L<Text::ANSI::Fold> for detail.
+Set tab style.  Try C<--tabstyle=shade> for example.  My recent
+favorite is C<--tabstyle=squat-arrow,emspace>. See L<Text::ANSI::Fold>
+for detail.
 
 =item B<--ambiguous>=C<wide>|C<narrow>
 
