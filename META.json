@@ -60,13 +60,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kaz-utashiro/App-ansiexpand/issues"
+         "web" : "https://github.com/tecolicom/App-ansiexpand/issues"
       },
-      "homepage" : "https://github.com/kaz-utashiro/App-ansiexpand",
+      "homepage" : "https://github.com/tecolicom/App-ansiexpand",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kaz-utashiro/App-ansiexpand.git",
-         "web" : "https://github.com/kaz-utashiro/App-ansiexpand"
+         "url" : "https://github.com/tecolicom/App-ansiexpand.git",
+         "web" : "https://github.com/tecolicom/App-ansiexpand"
       }
    },
    "version" : "1.03",

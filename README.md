@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/kaz-utashiro/App-ansiexpand/workflows/test/badge.svg)](https://github.com/kaz-utashiro/App-ansiexpand/actions) [![MetaCPAN Release](https://badge.fury.io/pl/App-ansiexpand.svg)](https://metacpan.org/release/App-ansiexpand)
+[![Actions Status](https://github.com/tecolicom/App-ansiexpand/workflows/test/badge.svg)](https://github.com/tecolicom/App-ansiexpand/actions) [![MetaCPAN Release](https://badge.fury.io/pl/App-ansiexpand.svg)](https://metacpan.org/release/App-ansiexpand)
 # NAME
 
 ansiexpand, ansiunexpand - ANSI sequences aware tab expand/unexpand command
@@ -82,11 +82,11 @@ including single space even if it does not reduce total data length.
 
 # SEE ALSO
 
-[App::ansiexpand](https://metacpan.org/pod/App%3A%3Aansiexpand), [https://github.com/kaz-utashiro/App-ansiexpand](https://github.com/kaz-utashiro/App-ansiexpand)
+[App::ansiexpand](https://metacpan.org/pod/App%3A%3Aansiexpand), [https://github.com/tecolicom/App-ansiexpand](https://github.com/tecolicom/App-ansiexpand)
 
-[Text::ANSI::Tabs](https://github.com/kaz-utashiro/Text-ANSI-Tabs)
+[Text::ANSI::Tabs](https://github.com/tecolicom/Text-ANSI-Tabs)
 
-[Text::ANSI::Fold](https://github.com/kaz-utashiro/Text-ANSI-Fold)
+[Text::ANSI::Fold](https://github.com/tecolicom/Text-ANSI-Fold)
 
 # AUTHOR
 
@@ -94,7 +94,7 @@ Kazumasa Utashiro
 
 # LICENSE
 
-Copyright 2021-2022 Kazumasa Utashiro
+Copyright 2021-2023 Kazumasa Utashiro
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
