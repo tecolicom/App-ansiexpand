@@ -47,11 +47,17 @@ implementation detail.
     Set tab head and following space character.  If longer than single
     character, it is considered as a Unicode name.
 
-- **--tabstyle**=_style_, **--ts**=_style_
+- **--tabstyle**, **--ts**
+- **--tabstyle**=_style_, **--ts**=...
+- **--tabstyle**=_head-style_,_space-style_ **--ts**=...
 
-    Set tab style.  Try `--tabstyle=shade` for example.  My recent
-    favorite is `--tabstyle=squat-arrow,emspace`. See [Text::ANSI::Fold](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold)
-    for detail.
+    Set the style how tab is expanded.  Select `symbol` or `shade` for
+    example.  If two style names are combined, like
+    `squat-arrow,middle-dot`, use `squat-arrow` for tabhead and
+    `middle-dot` for tabspace.
+
+    Show available style list if called without parameter.  Styles are
+    defined in [Text::ANSI::Fold](https://metacpan.org/pod/Text%3A%3AANSI%3A%3AFold) library.
 
 - **--ambiguous**=`wide`|`narrow`
 

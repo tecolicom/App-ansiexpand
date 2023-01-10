@@ -21,7 +21,7 @@ use Getopt::EX::Hashed 1.05; {
     has tabstop   => ' t  =i  ' , min => 1;
     has tabhead   => '    =s  ' ;
     has tabspace  => '    =s  ' ;
-    has tabstyle  => ' ts =s  ' ;
+    has tabstyle  => ' ts :s  ' ;
     has help      => ' h      ' ;
     has version   => ' v      ' ;
 
@@ -30,6 +30,10 @@ use Getopt::EX::Hashed 1.05; {
     };
 
     has [ qw(+tabhead +tabspace +tabstyle) ] => sub {
+    	if ($_[1] eq '') {
+	    list_tabstyle();
+	    exit;
+	}
 	Text::ANSI::Tabs->configure("$_[0]" => $_[1]);
     };
 
@@ -77,6 +81,16 @@ sub run {
     }
 
     return 0;
+}
+
+sub list_tabstyle {
+    my %style = %Text::ANSI::Fold::TABSTYLE;
+    use List::Util 'max';
+    my $max = max map length, keys %style;
+    for my $name (sort keys %style) {
+	my($head, $space) = @{$style{$name}};
+	printf "%*s %s%s\n", $max, $name, $head, $space x 7;
+    }
 }
 
 1;
