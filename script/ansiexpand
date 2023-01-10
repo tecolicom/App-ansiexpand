@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-our $VERSION = "1.03";
+our $VERSION = "1.04";
 
 BEGIN {
     if ($0 =~ /unexpand$/) {
@@ -37,7 +37,7 @@ ansiunexpand [ option ] file ...
 
 =head1 VERSION
 
-Version 1.03
+Version 1.04
 
 =head1 DESCRIPTION
 
