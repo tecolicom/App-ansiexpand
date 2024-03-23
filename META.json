@@ -69,7 +69,7 @@
          "web" : "https://github.com/tecolicom/App-ansiexpand"
       }
    },
-   "version" : "1.04",
+   "version" : "1.05",
    "x_authority" : "cpan:UTASHIRO",
    "x_contributors" : [
       "Kazumasa Utashiro <kaz@utashiro.com>"
