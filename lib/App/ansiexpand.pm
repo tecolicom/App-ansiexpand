@@ -15,7 +15,7 @@ our $DEFAULT_UNEXPAND;
 
 use Getopt::EX::Hashed 1.05; {
 
-    Getopt::EX::Hashed->configure(DEFAULT => [ is => 'ro' ]);
+    Getopt::EX::Hashed->configure(DEFAULT => [ is => 'rw' ]);
 
     has unexpand  => ' u  !   ' , default => $DEFAULT_UNEXPAND;
     has all       => ' a      ' , default => 1;
@@ -28,20 +28,14 @@ use Getopt::EX::Hashed 1.05; {
     has help      => ' h      ' ;
     has version   => ' v      ' ;
 
-    has '+tabstop' => sub {
-	$_->{$_[0]} = $Text::ANSI::Tabs::tabstop = $_[1];
-    };
-
-    has '+minimum' => sub {
-	Text::ANSI::Tabs->configure("$_[0]" => $_[1]);
-    };
-
-    has [ qw(+tabhead +tabspace +tabstyle) ] => sub {
-    	if ($_[1] eq '') {
+    has [ qw(+minimum +tabstop +tabhead +tabspace +tabstyle) ] => sub {
+	my($name, $val) = ("$_[0]", $_[1]);
+    	if ($name eq 'tabstyle' and $val eq '') {
 	    list_tabstyle();
 	    exit;
 	}
-	Text::ANSI::Tabs->configure("$_[0]" => $_[1]);
+	$_->$name = $val;
+	Text::ANSI::Tabs->configure($name => $val);
     };
 
     has '+help' => sub {
@@ -58,8 +52,8 @@ use Getopt::EX::Hashed 1.05; {
     has ARGV => default => [];
     has '<>' => sub {
 	if ($_[0] =~ /^-([0-9]+)$/x) {
-	    $_->{tabstop} = $Text::ANSI::Tabs::tabstop = $1 or
-		die "$_[0]: invalid tabstop\n";
+	    $_->tabstop = $1 or die "$_[0]: invalid tabstop\n";
+	    Text::ANSI::Tabs->configure(tabstop => $1);
 	} else {
 	    if ($_[0] =~ /^-{1,2}+(.+)/) {
 		warn "Unknown option: $1\n";
