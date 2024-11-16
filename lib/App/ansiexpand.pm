@@ -31,7 +31,7 @@ use Getopt::EX::Hashed 1.05; {
 
     has [ qw(+minimum +tabstop +tabhead +tabspace +tabstyle) ] => sub {
 	my($name, $val) = ("$_[0]", $_[1]);
-    	if ($name eq 'tabstyle' and $val eq '') {
+	if ($name eq 'tabstyle' and $val eq '') {
 	    list_tabstyle();
 	    exit;
 	}
@@ -119,7 +119,7 @@ Kazumasa Utashiro
 
 =head1 LICENSE
 
-Copyright 2021-2023 Kazumasa Utashiro.
+Copyright 2021-2024 Kazumasa Utashiro.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
