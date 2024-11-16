@@ -19,6 +19,7 @@ use Getopt::EX::Hashed 1.05; {
 
     has unexpand  => ' u  !   ' , default => $DEFAULT_UNEXPAND;
     has all       => ' a      ' , default => 1;
+    has zap       => ' z      ' ;
     has minimum   => ' x  :1  ' ;
     has ambiguous => '    =s  ' , any => [ qw(wide narrow) ];
     has tabstop   => ' t  =i  ' , min => 1;
@@ -77,6 +78,7 @@ sub run {
 
     my $action = $app->unexpand ? \&ansi_unexpand : \&ansi_expand;
 
+    local $/ = $app->zap ? undef : $/;
     while (<>) {
 	print $action->($_);
     }
